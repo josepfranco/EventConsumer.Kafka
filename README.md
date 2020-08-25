@@ -1,2 +1,2 @@
-# Templates.CSharp
-Template repository for C# projects.
+# EventConsumer.Kafka
+Kafka integration with the event consuming abstractions in C#.
