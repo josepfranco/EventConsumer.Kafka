@@ -8,10 +8,10 @@ using Microsoft.Extensions.Options;
 
 namespace EventConsumer.Kafka
 {
-    public class Consumer : IConsumer
+    public sealed class Consumer : IConsumer
     {
-        private ConsumerConfig _consumerConfig;
-        private IConsumer<string, Event> _consumerBuilder;
+        private ConsumerConfig? _consumerConfig;
+        private IConsumer<string, Event>? _consumerBuilder;
         
         public Consumer(IOptions<KafkaConsumerConfiguration> kafkaConfigOptions)
         {
@@ -25,18 +25,18 @@ namespace EventConsumer.Kafka
         }
         
         /// <inheritdoc cref="IConsumer.ConsumptionHandler"/>
-        public event Action<Event> ConsumptionHandler;
+        public event Action<Event>? ConsumptionHandler;
 
         /// <inheritdoc cref="IConsumer.Consume"/>
         public void Consume(string topic)
         {
-            _consumerBuilder.Subscribe(topic);
+            _consumerBuilder?.Subscribe(topic);
             while (true)
             {
                 try
                 {
                     // set timeout of 0 so it doesnt block the thread, if no result was found, returns null
-                    var consumeResult = _consumerBuilder.Consume(0);
+                    var consumeResult = _consumerBuilder?.Consume(0);
                     if (consumeResult == null) continue;
                     
                     var obtainedEvent = consumeResult.Message.Value;
@@ -85,7 +85,7 @@ namespace EventConsumer.Kafka
         /**
          * How we dispose an object
          */
-        protected virtual void Dispose(bool disposing)
+        private void Dispose(bool disposing)
         {
             if (_disposed) return;
             if (disposing)
