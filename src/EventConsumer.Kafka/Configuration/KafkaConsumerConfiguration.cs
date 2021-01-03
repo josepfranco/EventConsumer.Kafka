@@ -5,11 +5,11 @@ namespace EventConsumer.Kafka.Configuration
         /// <summary>
         /// The bootstrap server urls in Kafka's format
         /// </summary>
-        public string BootstrapServerUrls { get; set; }
-        
+        public string BootstrapServerUrls { get; set; } = string.Empty;
+
         /// <summary>
         /// The Kafka consumer group 
         /// </summary>
-        public string GroupId { get; set; }
+        public string GroupId { get; set; } = string.Empty;
     }
 }
