@@ -11,5 +11,10 @@ namespace EventConsumer.Kafka.Configuration
         /// The Kafka consumer group 
         /// </summary>
         public string GroupId { get; set; } = string.Empty;
+        
+        /// <summary>
+        /// The Avro schema registry urls (separated by commas)
+        /// </summary>
+        public string AvroSchemaRegistryUrls { get; set; } = string.Empty;
     }
 }
