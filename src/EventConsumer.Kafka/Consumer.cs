@@ -1,7 +1,7 @@
 using System;
 using Abstractions.EventConsumer;
 using Abstractions.EventConsumer.Exceptions;
-using Abstractions.Events.Models;
+using Abstractions.Events;
 using Confluent.Kafka;
 using Confluent.Kafka.SyncOverAsync;
 using Confluent.SchemaRegistry;
@@ -9,8 +9,6 @@ using Confluent.SchemaRegistry.Serdes;
 using EventConsumer.Kafka.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Newtonsoft.Json;
-
 namespace EventConsumer.Kafka
 {
     public sealed class Consumer : IConsumer
@@ -50,6 +48,8 @@ namespace EventConsumer.Kafka
                 {
                     // only throw exception is the error is fatal (aka it's in an unrecoverable state)
                     if (e.Error.IsFatal) throw new ConsumerException(e.Message, e);
+                    
+                    _logger.LogError(e, "Kafka encountered an error and has thrown an exception");
                 }
             }
         }
@@ -108,7 +108,7 @@ namespace EventConsumer.Kafka
             if (_disposed) return;
             if (disposing)
             {
-                // to be implemented if needed
+                _consumerBuilder?.Unsubscribe();
                 _consumerBuilder?.Dispose();
                 _schemaRegistry?.Dispose();
             }
