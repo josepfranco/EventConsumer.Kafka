@@ -1,0 +1,176 @@
+{
+  "homepages": [],
+  "source_base_path": "/github/workspace/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EventConsumer.Kafka.Configuration.KafkaConsumerConfiguration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EventConsumer.Kafka.Configuration.KafkaConsumerConfiguration.html",
+          "hash": "PskhIEABUSfmCFqeaWbF7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EventConsumer.Kafka.Configuration.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EventConsumer.Kafka.Configuration.html",
+          "hash": "cUX/hZLnVKHFstFQG5TRGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EventConsumer.Kafka.Consumer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EventConsumer.Kafka.Consumer.html",
+          "hash": "Li/KNEvw1fovoGC2ofBIeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EventConsumer.Kafka.Extensions.ServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EventConsumer.Kafka.Extensions.ServiceCollectionExtensions.html",
+          "hash": "6GT+k37OEXVDJzpBzUMy1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EventConsumer.Kafka.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EventConsumer.Kafka.Extensions.html",
+          "hash": "TxrgyLSK5opC2f8uvgRm0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EventConsumer.Kafka.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EventConsumer.Kafka.html",
+          "hash": "eN5QC10tdNqrvB324oLa5Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "Ing9lk+p4M24RU0lpqcgfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "TfSp3fXGN60coHTuvdVy8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "X/ZJc7/GWn455cfymY5vNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "RuSgbss7ZGLSgyvacZd72A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 2,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 6,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
